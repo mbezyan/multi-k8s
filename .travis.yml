@@ -15,7 +15,7 @@ before_install:
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   # Sources a configuration file from the default install directory of Google Cloud
   # SDK, which means it modifies the shell running inside of Travis CI.
-  - source $HOME/google-cloud-sdk/path.bach.inc
+  - source $HOME/google-cloud-sdk/path.bash.inc
   # Ask Googke SDK CLI to install kubectl:
   # This will download and install kubectl command line tool
   - gcloud components update kubectl
