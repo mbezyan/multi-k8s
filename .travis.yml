@@ -39,7 +39,7 @@ before_install:
 
 script:
   # Run the tests
-  - docker run -e CI=true mbezyan/docker-react npm test
+  - docker run -e CI=true mbezyan/react-test npm test
 
 deploy:
   # Tell Travis that we will provide the script for deployment
