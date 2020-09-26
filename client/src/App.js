@@ -13,7 +13,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">
-              Fib Calculator GKE Kubernetes Engine v1
+              Fib Calculator GKE Kubernetes Engine v2
             </h1>
             <Link to="/">Home</Link>
             <Link to="/otherpage">Other Page</Link>
