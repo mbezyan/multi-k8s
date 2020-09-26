@@ -7,7 +7,7 @@ env:
     # Stores the commit hash (SHA) of the tip of the branch that we have just pulled
     - SHA=$(git rev-parse HEAD)
     # Will be used by Google Cloud SDK and tells it to not show any input prompts
-    - CLOUDSDK_CORE_DISABLE_PROMPTS = 1
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
   # Download and install Google Cloud SDK:
   # On the left of the pipe symbol will download Google Cloud SDK and on the right will
