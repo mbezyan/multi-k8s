@@ -31,7 +31,7 @@ before_install:
   # Specify Google Cloud Compute Zone
   - gcloud config set compute/zone australia-southeast1-a
   # Specify Google Cloud K8s Cluster name to be used
-  - gcloud container cluster get-credentials multi-cluster
+  - gcloud container clusters get-credentials multi-cluster
   # Log in to Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # Buid the image for testing
