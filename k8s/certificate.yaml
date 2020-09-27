@@ -7,7 +7,7 @@ sepc:
   # after it's obtained from Cert Manager.
   secretName: multi-k8s-hash-bez-com
   issuerRef:
-    # This should correspond to the corresponding issuer.yaml file
+    # This should correspond to the corresponding Issuer configuration
     name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: multi-k8s.hash-bez.com
