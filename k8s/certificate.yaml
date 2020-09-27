@@ -1,0 +1,26 @@
+apiVersion: certmanager.k8s.io/v1alpha2
+kind: Certificate
+metadata:
+  name: multi-k8s-hash-bez-com-tls
+sepc:
+  # This specifies where the Certificate should be stored
+  # after it's obtained from Cert Manager.
+  secretName: multi-k8s-hash-bez-com
+  issuerRef:
+    # This should correspond to the corresponding issuer.yaml file
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: multi-k8s.hash-bez.com
+  # List of all the different domains that should be associated
+  # with the Certificate. i.e. The Certificate we get back will
+  # be good for multi-k8s.hash-bez.com
+  dnsNames:
+    - multi-k8s.hash-bez.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        # These are the domain names that will be used in the
+        # verification process.
+        domains:
+          - multi-k8s.hash-bez.com
