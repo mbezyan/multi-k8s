@@ -11,8 +11,8 @@ metadata:
 spec:
   tls:
     - hosts:
-      - multi-k8s.hash-bez.com
-    secretName: multi-k8s-hash-bez-com
+        - multi-k8s.hash-bez.com
+      secretName: multi-k8s-hash-bez-com
   rules:
     - host: multi-k8s.hash-bez.com
       http:
