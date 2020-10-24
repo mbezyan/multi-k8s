@@ -2,7 +2,7 @@
 # apiVersion is different to other apiVersions we have seen because it's not an
 # Object included in K8s by default. It's something that's defined by Cert
 # Manager.
-apiVersion: certmanager.k8s.io/v1alpha2
+apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
