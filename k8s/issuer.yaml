@@ -1,6 +1,6 @@
 # Purpose: describe to Cert Manager where it should go to obtain a Certificate
 # apiVersion is different to other apiVersions we have seen because it's not an
-# Object included in K8s by default. It's something that's defined by Cert
+# Object included in K8s by default. It's something that's defined by the Cert
 # Manager.
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
