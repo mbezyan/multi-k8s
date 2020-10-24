@@ -1,0 +1,26 @@
+# Purpose: describe to Cert Manager where it should go to obtain a Certificate
+# apiVersion is different to other apiVersions we have seen because it's not an
+# Object included in K8s by default. It's something that's defined by Cert
+# Manager.
+apiVersion: certmanager.k8s.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    # This is the URL to the Cert Manager API
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: "mbezyan@gmail.com"
+    privateKeySecretRef:
+      # This is used to store the secret that LetsEncrypt sends back
+      # when our Cluster communicate with it and it is tied our
+      # record with LetsEncrypt.
+      # It comes into play as part of the verification process
+      # when LetsEncrypt tries to access the randomly generated URL.
+      name: letsencrypt-prod
+    # The following specifies the HTTP process used. i.e. http01 as opposed to
+    # other options.
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
